@@ -3,9 +3,9 @@ import { PipelineHandler } from 'proskomma-json-tools';
 import * as pipelines from "../lib/pipelines"
 import * as transforms from "../lib/transforms"
 
-const readOptions = { /* readPipeline: "stripMarkupPipeline" */ };
+const readOptions = { readPipeline: "stripMarkupPipeline" };
 const writeOptions = {
-  /* writePipeline: "mergeMarkupPipeline", */
+  writePipeline: "mergeMarkupPipeline",
   ...readOptions
 };
 
