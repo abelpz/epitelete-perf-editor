@@ -24,20 +24,20 @@ class EpiteleteHtml extends Epitelete {
     return !this.canRedo(bookCode);
   }
   async undo(bookCode) {
-    return this.undoPerf(bookCode, readOptions);
+    return this.undoHtml(bookCode, readOptions);
   }
   async redo(bookCode) {
-    return this.redoPerf(bookCode, readOptions);
+    return this.redoHtml(bookCode, readOptions);
   }
   async load(bookCode, perfDocumentHtml) {
     if (!perfDocumentHtml) return await this.get(bookCode);
     return this.sideloadPerf(bookCode, perfDocumentHtml, readOptions);
   }
   async get(bookCode) {
-    return this.readPerf(bookCode, readOptions);
+    return this.readHtml(bookCode, readOptions);
   }
   async update(bookCode, sequenceId, sequence) {
-    return await this.writePerf(bookCode, sequenceId, sequence, writeOptions);
+    return await this.writeHtml(bookCode, sequenceId, sequence, writeOptions);
   }
 }
 
