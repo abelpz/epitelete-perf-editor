@@ -1,0 +1,78 @@
+#perf-editor {
+  width: 100%;
+  display: flex;
+}
+
+.jse-contents {
+  max-height: 60vh;
+}
+.section {
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.mark.chapter {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.mark.verses {
+  font-size: 0.8em;
+  vertical-align: super;
+  margin: 0 0.2em;
+  font-weight: 600;
+}
+
+span.start_milestone.usfm.zaln:after {
+  content: "[";
+  color: #9cf3d2;
+  font-weight: 400;
+}
+
+span.end_milestone.usfm.zaln:before {
+  content: "]";
+  color: #9cf3d2;
+  font-weight: 400;
+}
+
+.d2h-diff-table tr {
+  display: grid;
+  grid-template-columns: 7.5em auto;
+}
+
+.d2h-code-line-prefix {
+  white-space: pre;
+  display: block;
+  padding: 0 1em;
+}
+
+span.d2h-code-line-ctn {
+  white-space: normal;
+}
+
+.d2h-code-line {
+  display: grid;
+  grid-template-columns: min-content auto;
+  padding: 0 1em 0 0;
+  box-sizing: border-box;
+}
+
+td.d2h-code-linenumber.d2h-ins {
+  position: relative;
+}
+
+.d2h-file-side-diff .d2h-diff-table tr {
+  display: grid;
+  grid-template-columns: 4em auto;
+}
+
+.d2h-code-side-line {
+  display: grid;
+  grid-template-columns: min-content auto;
+  padding: 0 1em 0 0;
+  box-sizing: border-box;
+}
+
+td.d2h-code-side-linenumber {
+  position: relative;
+}

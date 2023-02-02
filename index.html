@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PERF Editor JS</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css" />
+  </head>
+
+  <body>
+    <div id="app" class="uk-container">
+      <header>
+        <h1 class="uk-heading-bullet">PERF Editor JS</h1>
+        <div class="uk-grid-small" uk-grid>
+          <div class="uk-width-5-6@m">
+            <input
+              id="res-input"
+              class="uk-input"
+              type="text"
+              placeholder="url"
+              aria-label="100"
+              value="...loading"
+              disabled
+            />
+          </div>
+          <button
+            id="load-btn"
+            class="uk-button uk-button-primary uk-width-expand"
+            disabled
+          >
+            Load
+          </button>
+        </div>
+      </header>
+      <div class="uk-card uk-card-default uk-card-body uk-padding-small">
+        <ul
+          class="uk-background-default uk-card-header uk-margin-remove"
+          uk-tab
+          uk-sticky
+        >
+          <li><a href="#">Editor</a></li>
+          <li><a href="#">Diff</a></li>
+          <li><a href="#">USFM</a></li>
+          <li><a href="#">HTML</a></li>
+        </ul>
+        <ul class="uk-switcher uk-margin">
+          <li>
+            <div id="perf-editor" class="section"></div>
+          </li>
+          <li>
+            <div id="diff-section" class="section"></div>
+          </li>
+          <li>
+            <pre id="usfm-section" class="section"></pre>
+          </li>
+          <li>
+            <div id="html-section" class="section"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>
