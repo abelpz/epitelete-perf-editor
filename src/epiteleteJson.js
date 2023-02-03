@@ -1,4 +1,4 @@
-import Epitelete from "epitelete";
+import Epitelete from "epitelete-html";
 import { PipelineHandler } from 'proskomma-json-tools';
 import * as pipelines from "../lib/pipelines"
 import * as transforms from "../lib/transforms"

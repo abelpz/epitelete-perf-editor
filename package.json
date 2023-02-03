@@ -11,8 +11,8 @@
   "dependencies": {
     "diff": "5.1.0",
     "diff2html": "3.4.22",
-    "epitelete": "0.2.16",
-    "epitelete-html": "0.2.17",
+    "epitelete": "0.2.18",
+    "epitelete-html": "0.2.18",
     "proskomma": "^0.9.3",
     "uikit": "3.15.12",
     "vanilla-jsoneditor": "0.9.1"

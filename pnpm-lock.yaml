@@ -4,8 +4,8 @@ specifiers:
   deep-sort-object: ^1.0.2
   diff: 5.1.0
   diff2html: 3.4.22
-  epitelete: 0.2.16
-  epitelete-html: 0.2.17
+  epitelete: 0.2.18
+  epitelete-html: 0.2.18
   proskomma: ^0.9.3
   proskomma-json-tools: ^0.6.6
   uikit: 3.15.12
@@ -16,8 +16,8 @@ specifiers:
 dependencies:
   diff: 5.1.0
   diff2html: 3.4.22
-  epitelete: 0.2.16
-  epitelete-html: 0.2.17
+  epitelete: 0.2.18
+  epitelete-html: 0.2.18
   proskomma: 0.9.3
   uikit: 3.15.12
   vanilla-jsoneditor: 0.9.1
@@ -1113,18 +1113,18 @@ packages:
     resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
     dev: false
 
-  /epitelete-html/0.2.17:
-    resolution: {integrity: sha512-MrJSdBa1H1Fd7tQdMJYcPb2KQMbXZpiEGKrE0buKQkixYYoexrPfD5/QlV5v90AvloQCY3jh2lSr3/EYFDkZ+w==}
+  /epitelete-html/0.2.18:
+    resolution: {integrity: sha512-npiDp3QLAzocUav9andsl85ye4PDkcNo4igUbhY8/giLFDz3owaKZuwqekHgTkHZXdUefJfSgjiOQeVpcfqPZw==}
     dependencies:
       '@babel/core': 7.20.12
-      epitelete: 0.2.16
+      epitelete: 0.2.18
       node-html-parser: 5.4.2
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /epitelete/0.2.16:
-    resolution: {integrity: sha512-VT3qTdOkERmPA1SDRmGBGpkfSdWPK1IOWLONxuZfC88XbJ9rzcWGHTUR8tx3pG2Nq1T9PCt5LlJ/6nF1ZqIdyg==}
+  /epitelete/0.2.18:
+    resolution: {integrity: sha512-xoJ5+X4M9zlq26D64pT1P7LGlritbdPPlS1SyC9AUacwocrhRmX25VeKLnDkW6GUG/+IJSsx/uik51cq5TB/MA==}
     dependencies:
       '@babel/core': 7.20.12
       proskomma-json-tools: 0.6.6

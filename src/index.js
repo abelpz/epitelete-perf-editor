@@ -77,9 +77,9 @@ const getBook = async (url) => {
       epiJson.readUsfm(doc.bookCode).then((newUsfm) => {
         usfm.push(newUsfm).render();
       });
-      // epiJson.readHtml(doc.bookCode).then((newHtml) => {
-      //   html.push(newHtml.sequencesHtml[newHtml.mainSequenceId]).render();
-      // });
+      epiJson.readHtml(doc.bookCode).then((newHtml) => {
+        html.push(newHtml.sequencesHtml[newHtml.mainSequenceId]).render();
+      });
     },
     onRenderMenu: (mode, items) => {
       /*
@@ -114,51 +114,28 @@ const getBook = async (url) => {
   const editor = new JSONEditor({ target, props });
 
   const launchEditor = async () => {
-    // console.log(await epiJson.readPerf(doc.bookCode));
     const initialDoc = await epiJson.load(doc.bookCode);
 
-    
     doc.strippedAlignment = {
       ...(await epiJson.getPipelineData(doc.bookCode))
     };
 
      console.log({ strippedAlignment: doc.strippedAlignment?.strippedAlignment?.[1][1] });
 
-    // epiJson.readHtml(doc.bookCode).then((newHtml) => {
-    //   html.push(newHtml.sequencesHtml[newHtml.mainSequenceId]).render();
-    // });
+    epiJson.readHtml(doc.bookCode).then((newHtml) => {
+      html.push(newHtml.sequencesHtml[newHtml.mainSequenceId]).render();
+    });
     epiJson.readPerf(doc.bookCode).then((perf) => {
       const initialAlignment = readify(perf);
       console.log({ initialPerf: perf.sequences[perf.main_sequence_id].blocks[1].content.slice(1,50) });
-      // console.log(initialAlignment);
       diff.push(initialAlignment).render();
     });
     epiJson.readUsfm(doc.bookCode).then((newUsfm) => {
       usfm.push(newUsfm).render();
     });
-
-    let index = 4
-    let sequenceId = initialDoc.json.main_sequence_id
-    const getSequence = (sequences, type) => {
-      sequenceId = Object.keys(sequences).find(key => sequences[key].type === type)
-      return sequences[sequenceId]
-    };
-    const type = "footnote"
-    let sequence = getSequence(initialDoc.json.sequences, type);
-    let newPerf = initialDoc.json;
-    while (index) {
-      // console.log(index)
-      // console.log({sequence, sequenceId})
-      newPerf = await epiJson.update(doc.bookCode, sequenceId, sequence);
-      sequence = getSequence(newPerf.json.sequences, type);
-      index--;
-    }
-    console.log(newPerf.json.sequences[newPerf.json.main_sequence_id].blocks[1].content.slice(1, 5));
-    console.log({history: epiJson.history["RUT"]});
-    editor.set(newPerf);
+    editor.set(initialDoc);
   };
 
-  // console.log(epiJson.pipelineHandler.pipelines)
   const onLoad = async (url) => {};
 
   const loadInput = new LoadInput({
