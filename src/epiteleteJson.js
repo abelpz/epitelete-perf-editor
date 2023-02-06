@@ -1,11 +1,11 @@
 import Epitelete from "epitelete-html";
 import { PipelineHandler } from 'proskomma-json-tools';
-import * as pipelines from "../lib/pipelines"
-import * as transforms from "../lib/transforms"
+// import * as pipelines from "../lib/pipelines"
+// import * as transforms from "../lib/transforms"
 
-const readOptions = { readPipeline: "stripMarkupPipeline" };
+const readOptions = { readPipeline: "stripAlignmentPipeline" };
 const writeOptions = {
-  writePipeline: "mergeMarkupPipeline",
+  writePipeline: "mergeAlignmentPipeline",
   ...readOptions
 };
 
@@ -17,17 +17,17 @@ const writeOptions = {
 class EpiteleteJson extends Epitelete {
 
   constructor(...args) {
-    const [params] = args;
-    const { options, proskomma } = params;
+    // const [params] = args;
+    // const { options, proskomma } = params;
     super(...args)
-    this.pipelineHandler = new PipelineHandler({
-        pipelines: pipelines || options.pipelines
-            ? { ...pipelines, ...options.pipelines } : null,
-        transforms: transforms || options.transforms
-            ? { ...transforms, ...options.transforms } : null,
-        proskomma: proskomma,
-        vervose: true
-    });
+    // this.pipelineHandler = new PipelineHandler({
+    //     pipelines: pipelines || options.pipelines
+    //         ? { ...pipelines, ...options.pipelines } : null,
+    //     transforms: transforms || options.transforms
+    //         ? { ...transforms, ...options.transforms } : null,
+    //     proskomma: proskomma,
+    //     vervose: true
+    // });
   }
 
   undoDisabled(bookCode) {
